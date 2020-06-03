@@ -7,11 +7,35 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import "./global.css"
 
 import Header from "./header"
-import "./layout.css"
+import Typography from "@material-ui/core/Typography"
+import Link from "@material-ui/core/Link"
+import { makeStyles } from "@material-ui/core/styles"
 
+const useStyles = makeStyles((theme) => (
+  {
+    footer: {
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(6)
+    }
+  }
+))
+
+function Copyright({siteTitle}) {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {"Copyright © "}
+      <Link color="inherit" href="https://material-ui.com/">
+        {siteTitle}
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  )
+}
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -23,23 +47,21 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const classes = useStyles()
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <footer className={classes.footer}>
+        <Typography variant="overline" component="h1" align="center" gutterBottom>
+          Manage easily your tank
+        </Typography>
+        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+          Open source application
+        </Typography>
+        <Copyright siteTitle={data.site.siteMetadata.title}/>
+      </footer>
     </>
   )
 }
