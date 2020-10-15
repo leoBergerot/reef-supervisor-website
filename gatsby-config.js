@@ -3,6 +3,9 @@ module.exports = {
     title: `Reef Supervisor`,
     description: `Manage your reef tank easily with reef supervisor`,
     author: `Léo Bergerot`,
+    supportedLanguages: ['fr', 'en'],
+    defaultLanguage: 'en',
+    siteUrl: 'https://reef-supervisor.fr'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
