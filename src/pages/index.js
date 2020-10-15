@@ -36,7 +36,7 @@ const IndexPage = () => {
   const classes = useStyles()
   return (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Home" description={"test"}/>
     <div className={classes.subHeader}>
       <Container maxWidth="md">
         <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>

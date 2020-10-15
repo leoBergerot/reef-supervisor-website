@@ -9,31 +9,35 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { useTranslation } from "react-i18next"
+import { usePageContext } from "../../page-context"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, meta, title }) {
+  const { t } = useTranslation();
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
-            description
+            siteUrl
+            supportedLanguages
             author
           }
         }
       }
     `
   )
+  const { lang, originalPath } = usePageContext();
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || t('siteMetadata.description')
+  const host = site.siteMetadata.siteUrl;
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${t('siteMetadata.title')}`}
       meta={[
         {
           name: `description`,
@@ -68,6 +72,22 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
+      link={[
+        {
+          rel: 'canonical',
+          href: `${host}/${lang}${originalPath}`,
+        },
+        {
+          rel: 'alternate',
+          hrefLang: 'x-default',
+          href: `${host}${originalPath}`,
+        },
+        ...site.siteMetadata.supportedLanguages.map(supportedLang => ({
+          rel: 'alternate',
+          hrefLang: supportedLang,
+          href: `${host}/${supportedLang}${originalPath}`,
+        })),
+      ]}
     />
   )
 }
