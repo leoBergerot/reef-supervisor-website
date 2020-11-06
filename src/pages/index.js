@@ -135,7 +135,7 @@ const IndexPage = () => {
           Application gratuite & ouverte pour la gestion des aquariums récifal
         </Typography>
         <Typography variant="h5" align="center" color="textSecondary" paragraph>
-          Le suivi des paramètres est un élément clef pour une maintenance efficace
+          Le suivi des paramètres de l'eau est un élément clef pour une la bonne santé de votre bac
         </Typography>
         <div className={classes.subHeaderButtons}>
           <Grid container spacing={2} justify="center">
