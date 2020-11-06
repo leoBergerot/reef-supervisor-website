@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Reef Supervisor`,
-    description: `Reef supervisor permet de suivre facilement les paramètre d'un aquarium récifal`,
+    description: `Reef supervisor permet de suivre facilement les paramètres de l'eau d'un aquarium récifal`,
     author: `Léo Bergerot`,
   },
   plugins: [
@@ -28,14 +28,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-material-ui`,
+      resolve: `gatsby-theme-material-ui`,
       options: {
-        stylesProvider: {
-          injectFirst: true,
-        },
-      },
-    },
-    `gatsby-plugin-styled-components`
+        stylesConfig: {
+          // disableAutoprefixing: true,
+          // disableMinification: true
+        }
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
