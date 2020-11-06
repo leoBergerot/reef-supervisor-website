@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Reef Supervisor`,
-    description: `Manage your reef tank easily with reef supervisor`,
+    description: `Reef supervisor permet de suivre facilement les paramètre d'un aquarium récifal`,
     author: `Léo Bergerot`,
   },
   plugins: [

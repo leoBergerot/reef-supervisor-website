@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => (
   {
     footer: {
       backgroundColor: theme.palette.background.paper,
-      padding: theme.spacing(6)
+      padding: theme.spacing(1),
+      boxShadow: "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)"
     }
   }
 ))
@@ -54,9 +55,6 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
       <footer className={classes.footer}>
-        <Typography variant="overline" component="h1" align="center" gutterBottom>
-          Manage easily your tank
-        </Typography>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
           Open source application
         </Typography>
