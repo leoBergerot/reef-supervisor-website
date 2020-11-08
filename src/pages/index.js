@@ -90,40 +90,40 @@ const IndexPage = () => {
 
   const cards = [
     {
-      title: "Gestion multiple d'aquarium",
-      content: "L'application permet de manager plusieurs aquarium à partir du même compte",
+      title: "Gestion d'aquariums multiples",
+      content: "L'application permet de gérer plusieurs aquariums au travers d'un même compte",
       image: images.multiple.childImageSharp.fluid,
-      imageTitle: "Gestion multiple"
+      imageTitle: "Gestion d'aquarium multiple"
     },
     {
       title: "Tableau de bord",
-      content: "Un tableau de bord affichant le dernier relevé et l’augmentation ou diminution par rapport avant-dernier relever",
+      content: "Pour chacun des paramètres, l'application affiche son évolution par rapport à l'avant-dernier relevé",
       image: images.board.childImageSharp.fluid,
-      imageTitle: "imageTitle1"
+      imageTitle: "Tableau de bord"
     },
     {
       title: "Accès rapide aux autres aquariums",
-      content: "Depuis le menu en haut à droite vous pouvez rapidement accèder au tableau de bord de vos autres aquariums",
+      content: "L'accès au tableau de bord de vos aquariums s'effectue depuis le menu en haut à droite",
       image: images.switch.childImageSharp.fluid,
-      imageTitle: "imageTitle1"
+      imageTitle: "Accès rapide aux autres aquariums"
     },
     {
-      title: "Ajout rapide d'un paramètre",
-      content: "Depuis le dashboard vous pourrez rapidement ajouter la dernière mesure effectuée, vous pourrez y associer la date et l'heure",
+      title: "Ajout d'une mesure",
+      content: "Ajout facile et rapide de la dernière mesure effectuée ainsi que sa date et son heure",
       image: add,
-      imageTitle: "imageTitle1"
+      imageTitle: "Ajout d'une mesure"
     },
     {
-      title: "Accès aux anciennes valeurs",
-      content: "Un historique des valeurs est accessible depuis le dashboard, vous pourrez en supprimer ou les éditer en cas d'erreurs de saisie",
+      title: "Accès aux anciennes mesures",
+      content: "Grâce à l'historique des mesures, vous pourrez en supprimer ou en éditer en cas d'erreur de saisie",
       image: edit,
-      imageTitle: "imageTitle1"
+      imageTitle: "Accès aux anciennes mesures"
     },
     {
       title: "Graphiques",
-      content: "Grâce à cette fonctionnalité, vous aurez une évolution visuelle de vos paramètres en un click, de plus vous pouvez filtrer les résultats entre deux dates",
+      content: "Vous aurez la possibilité de filtrer les valeurs mesurées entre deux dates et d'afficher graphiquement l'évolution des paramètres",
       image: archives,
-      imageTitle: "imageTitle1"
+      imageTitle: "Graphiques"
     }
   ]
   return (
@@ -132,10 +132,10 @@ const IndexPage = () => {
     <div className={classes.subHeader}>
       <Container maxWidth="md">
         <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-          Application gratuite & ouverte pour la gestion des aquariums récifal
+          Application gratuite & ouverte pour le suivi des paramètres de l'eau des aquariums récifaux
         </Typography>
         <Typography variant="h5" align="center" color="textSecondary" paragraph>
-          Le suivi des paramètres de l'eau est un élément clef pour une la bonne santé de votre bac
+          Pour la bonne santé de vos animaux et une maintenance efficace de votre aquarium, le suivi des paramètres est un élément clé pour maintenir la meilleure qualité de l'eau
         </Typography>
         <div className={classes.subHeaderButtons}>
           <Grid container spacing={2} justify="center">
@@ -180,7 +180,7 @@ const IndexPage = () => {
     <div className={classes.preFooter}>
       <Container maxWidth="md">
         <Typography variant="h5" align="center" color="textSecondary" paragraph>
-          Application web Compatible iOS et Android, vos paramètres sont à porter de vous !
+          Application web Compatible iOS et Android, vos paramètres sont à portée de main !
         </Typography>
         <div className={classes.preFooterButtons}>
           <Grid container spacing={2} justify="center">
@@ -192,7 +192,7 @@ const IndexPage = () => {
           </Grid>
         </div>
         <Typography variant="overline" component="h1" align="center" paragraph>
-          Manage easily your tank
+          Manage easily your tank with Reef Supervisor
         </Typography>
       </Container>
     </div>
