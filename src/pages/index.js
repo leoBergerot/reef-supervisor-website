@@ -128,7 +128,7 @@ const IndexPage = () => {
   ]
   return (
   <Layout>
-    <SEO title="Accueil"/>
+    <SEO title="Application"/>
     <div className={classes.subHeader}>
       <Container maxWidth="md">
         <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>

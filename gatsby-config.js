@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Reef Supervisor`,
-    description: `L'application Reef Supervisor permet de suivre facilement les paramètres de l'eau d'un aquarium récifal`,
+    description: `L'application Reef Supervisor permet de suivre facilement les paramètres de l'eau d'un aquarium récifal depuis votre téléphone ou tablette (iOS, Android) et aussi sur votre ordinateur`,
     author: `Léo Bergerot`,
   },
   plugins: [
